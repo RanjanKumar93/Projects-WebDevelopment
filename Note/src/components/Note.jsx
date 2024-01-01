@@ -1,7 +1,3 @@
-const Note = ({ note }) => {
-    return (
-      <li>{note.content}</li>
-    )
-  }
-  
-  export default Note
+export default function Note({ content, label, handleToggleImportant, handleDelete }) {
+  return <><li>{content} <button onClick={handleToggleImportant}>{label}</button> <button onClick={handleDelete}>delete</button></li></>;
+}
